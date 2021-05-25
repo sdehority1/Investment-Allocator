@@ -1,2 +1,2 @@
 # Investment-Allocator
-Simple tool for my personal investment strategy. 
+Determining the amount of money I needed to invest each week was frustrating. I built this to help with that. 

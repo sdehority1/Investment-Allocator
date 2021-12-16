@@ -9,6 +9,9 @@ const tickers = {
     5: "FMCSX: $"
 };
 
+//INVESTMENT AMOUNT
+const amounts = [0.18, 0.22, 0.25, 0.25, 0.0, 0.1];
+
 let childFunc = () => {
     for (let i = 0; i < investmentArr.length; i++) {
         var child = document.createElement("div");
@@ -24,10 +27,10 @@ button.addEventListener("click", function () {
     if (investmentArr.length > 0) {
         output.innerHTML = "";
         investmentArr = [];
-        investmentAmt(document.getElementById("investmentamount").value, [0.15, 0.20, 0.19, 0.26, 0.1, 0.1]);
+        investmentAmt(document.getElementById("investmentamount").value, amounts);
         childFunc();
     } else {
-        investmentAmt(document.getElementById("investmentamount").value, [0.15, 0.20, 0.19, 0.26, 0.1, 0.1]);
+        investmentAmt(document.getElementById("investmentamount").value, amounts);
         childFunc();
     }
 });

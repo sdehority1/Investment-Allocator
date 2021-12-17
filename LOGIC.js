@@ -51,3 +51,6 @@ function investmentAmt(cash, arr) {
     }
 }
 
+/* Need to create an object where you can push as many tickers as you want, along with the percentage of your cash that you want to allocate to that investment. 
+Maybe it could build a table? So the tickers + percentages are listed in one table, and the investment account is listed in another table so at the end
+you can see how much you allocated by percentage and where it went*/

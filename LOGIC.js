@@ -45,6 +45,7 @@ button.addEventListener("click", function () {
 });
 
 //CALCULATE INVESTMENT AMOUNTS
+//You could probably do this with a concat so you don't have to mutate the original array
 function investmentAmt(cash, arr) {
     for (let i = 0; i < arr.length; i++) {
         investmentArr.push(`${tickers[i]}${(cash * arr[i]).toFixed(2)}` + " " + `(${amounts[i]* 100}`+`%)`);

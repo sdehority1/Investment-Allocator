@@ -16,7 +16,7 @@ const amounts = [0.18, 0.22, 0.25, 0.25, 0.0, 0.1];
 const reducer = (initialVal, valTwo) => initialVal + valTwo;
 
 //SUM OF TEST FUNC 
-const arrSum = amounts.reduce(reducer); 
+const arrSum = amounts.reduce(reducer);
 
 let childFunc = () => {
     for (let i = 0; i < investmentArr.length; i++) {
@@ -30,25 +30,26 @@ let childFunc = () => {
 
 //ON-CLICK FUNCTION
 button.addEventListener("click", function () {
-    if (arrSum !== 1){
-        alert (`Please refactor your array, the sum is not 100% of your investment`)
-        } else {
-    if (investmentArr.length > 0) {
-        output.innerHTML = "";
-        investmentArr = [];
-        investmentAmt(document.getElementById("investmentamount").value, amounts);
-        childFunc();
+    if (arrSum !== 1) {
+        alert(`Please refactor your array, the sum is not 100% of your investment`)
     } else {
-        investmentAmt(document.getElementById("investmentamount").value, amounts);
-        childFunc();
-    }}
+        if (investmentArr.length > 0) {
+            output.innerHTML = "";
+            investmentArr = [];
+            investmentAmt(document.getElementById("investmentamount").value, amounts);
+            childFunc();
+        } else {
+            investmentAmt(document.getElementById("investmentamount").value, amounts);
+            childFunc();
+        }
+    }
 });
 
 //CALCULATE INVESTMENT AMOUNTS
 //You could probably do this with a concat so you don't have to mutate the original array
 function investmentAmt(cash, arr) {
     for (let i = 0; i < arr.length; i++) {
-        investmentArr.push(`${tickers[i]}${(cash * arr[i]).toFixed(2)}` + " " + `(${amounts[i]* 100}`+`%)`);
+        investmentArr.push(`${tickers[i]}${(cash * arr[i]).toFixed(2)}` + " " + `(${amounts[i] * 100}` + `%)`);
     }
 }
 
